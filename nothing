@@ -1,0 +1,14 @@
+import json
+
+default_users = {
+    "admin": {
+        "password": "f6ee94ecb014f74f887b9dcc52daecf73ab3e3333320cadd98bcb59d895c52f5",  # Hash of "qwerty12345"
+        "role": "admin"
+    }
+}
+
+with open("users.json", "w") as file:
+    json.dump(default_users, file, indent=4)
+print("users.json created.")
+
+print("Looking for users.json in:", os.getcwd())
